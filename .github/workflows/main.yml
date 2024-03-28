@@ -17,6 +17,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          packageManager: 'npm'
+          wranglerVersion: '3.30.0'
 
       - run: npm install
       - run: npm deploy
