@@ -20,4 +20,12 @@ app.get('/app/api/:name', (c) => {
   })
 })
 
+app.get('/app/name/:id', (c) => {
+  return c.json({
+    ok: true,
+    id: c.req.param('id'),
+    name: 'Yogendra',
+  })
+})
+
 export default app
