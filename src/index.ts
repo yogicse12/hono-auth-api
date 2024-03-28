@@ -13,10 +13,10 @@ app.get('/app', (c) => {
   })
 })
 
-app.get('/app/api/:id', (c) => {
+app.get('/app/api/:name', (c) => {
   return c.json({
     ok: true,
-    id: c.req.param('id'),
+    id: c.req.param('name'),
   })
 })
 
