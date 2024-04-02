@@ -3,7 +3,7 @@ import { Hono } from 'hono'
 const app = new Hono()
 
 app.get('/', (c) => {
-  return c.text('Welcome to Hono API. Server is up and running...')
+  return c.html(`<h1>Welcome to Hono API. Server is up and running...</h1>`);
 })
 
 app.get('/app', (c) => {
