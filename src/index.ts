@@ -3,7 +3,7 @@ import { Hono } from 'hono'
 const app = new Hono()
 
 app.get('/', (c) => {
-  return c.text('Yogendra Yadav')
+  return c.text('Welcome to Hono API. Server is up and running...')
 })
 
 app.get('/app', (c) => {
@@ -26,6 +26,11 @@ app.get('/app/name/:id', (c) => {
     id: c.req.param('id'),
     name: 'Yogendra',
   })
+})
+
+app.get('/entry/:id', (c) => {
+  const id = c.req.param('id')
+  return c.text(`Your ID is, ${id}`);
 })
 
 export default app
